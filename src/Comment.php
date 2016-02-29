@@ -17,6 +17,12 @@ class Comment
      */
     protected $post;
 
+    public function __construct(Post $post)
+    {
+        $this->post = $post;
+        $post->addComment($this);
+    }
+
     public function getId()
     {
         return $this->id;
@@ -30,5 +36,10 @@ class Comment
     public function setBody($body)
     {
         $this->body = $body;
+    }
+
+    public function getPost()
+    {
+        return $this->post;
     }
 }

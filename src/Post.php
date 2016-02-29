@@ -14,7 +14,7 @@ class Post
     protected $title;
 
     /**
-     * @OneToMany(targetEntity="Comment", mappedBy="post", cascade={"persist"})
+     * @OneToMany(targetEntity="Comment", mappedBy="post")
      */
     protected $comments;
 

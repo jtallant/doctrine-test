@@ -3,7 +3,7 @@
 require_once "bootstrap.php";
 
 $post = new Post;
-$post->setName("My first post");
+$post->setTitle("My first post");
 
 $entityManager->persist($post);
 $entityManager->flush();
